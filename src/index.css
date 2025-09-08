@@ -84,6 +84,7 @@
     --section-bg: 222 84% 6%;
     --text-hero: 0 0% 100%; 
     --text-body: 215 20% 65%;
+  }
 }
 
 @layer base {
