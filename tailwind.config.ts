@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -47,6 +48,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Business-specific colors
+        "section-bg": "hsl(var(--section-bg))",
+        "text-hero": "hsl(var(--text-hero))",
+        "text-body": "hsl(var(--text-body))",
+        "pricing-highlight": "hsl(var(--pricing-highlight))",
+        "pricing-highlight-fg": "hsl(var(--pricing-highlight-fg))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +69,14 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "hero-gradient": "var(--hero-gradient)",
+        "feature-gradient": "var(--feature-gradient)",
+      },
+      boxShadow: {
+        "card": "var(--shadow-card)",
+        "feature": "var(--shadow-feature)",
       },
       keyframes: {
         "accordion-down": {
