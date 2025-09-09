@@ -1,5 +1,4 @@
-import founder1 from "@/assets/founder-1.jpg";
-import founder2 from "@/assets/founder-2.jpg";
+import { Button } from "@/components/ui/button";
 
 const AboutSection = () => {
   const founders = [
@@ -7,14 +6,12 @@ const AboutSection = () => {
       name: "Sarah Johnson",
       title: "CEO & Co-Founder",
       credentials: "MBA Harvard, Former VP at TechCorp",
-      image: founder1,
       bio: "Sarah brings 15+ years of enterprise software experience and a passion for helping businesses scale efficiently. She previously led digital transformation initiatives at Fortune 500 companies."
     },
     {
       name: "Michael Chen", 
       title: "CTO & Co-Founder",
       credentials: "PhD Computer Science MIT, Ex-Google Principal Engineer",
-      image: founder2,
       bio: "Michael is a renowned technologist who has built scalable systems serving millions of users. His expertise in distributed systems and AI drives our platform's technical excellence."
     }
   ];
@@ -24,11 +21,11 @@ const AboutSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-text-hero mb-6">
-            About BusinessCorp
+            About Company Name
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-xl text-text-body leading-relaxed mb-8">
-              Founded in 2018, BusinessCorp emerged from the simple belief that business operations 
+              Founded in 2018, Company Name emerged from the simple belief that business operations 
               shouldn't be complicated. Our founders, frustrated by inefficient legacy systems, 
               set out to create a solution that would truly transform how modern businesses operate.
             </p>
@@ -45,11 +42,9 @@ const AboutSection = () => {
           {founders.map((founder, index) => (
             <div key={index} className="text-center">
               <div className="relative mb-6 inline-block">
-                <img 
-                  src={founder.image} 
-                  alt={`${founder.name}, ${founder.title} of BusinessCorp`}
-                  className="w-48 h-48 rounded-full object-cover shadow-feature mx-auto"
-                />
+                <div className="wireframe-image wireframe-image-md rounded-full">
+                  Image
+                </div>
                 <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-hero-gradient rounded-full opacity-20 blur-xl"></div>
               </div>
               <h3 className="text-2xl font-bold text-text-hero mb-2">{founder.name}</h3>
@@ -70,6 +65,13 @@ const AboutSection = () => {
             Our roadmap includes AI-powered insights, advanced automation capabilities, 
             and even deeper integrations to help your business stay ahead of the curve.
           </p>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-12">
+          <Button variant="hero" size="lg" className="px-8 py-6 text-lg rounded-lg min-w-[200px]">
+            CTA
+          </Button>
         </div>
       </div>
     </section>

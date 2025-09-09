@@ -1,4 +1,5 @@
 import { CheckCircle, Zap, Shield, Users, BarChart3, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const FeatureOverview = () => {
   const features = [
@@ -16,7 +17,7 @@ const FeatureOverview = () => {
         {/* Hook Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-text-hero mb-6">
-            Why Choose BusinessCorp?
+            Why Choose Company Name?
           </h2>
           <p className="text-xl text-text-body max-w-3xl mx-auto leading-relaxed">
             Our comprehensive solution eliminates inefficiencies and empowers your team to focus on what matters most. 
@@ -29,10 +30,10 @@ const FeatureOverview = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-6 shadow-card hover:shadow-feature transition-all duration-300 hover:-translate-y-1"
+              className="bg-white rounded-lg p-6 border border-border hover:border-primary transition-all duration-300"
             >
               <div className="flex items-start space-x-4">
-                <div className="bg-feature-gradient p-3 rounded-lg">
+                <div className="bg-secondary p-3 rounded-lg border border-border">
                   <feature.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -42,6 +43,13 @@ const FeatureOverview = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <Button variant="hero" size="lg" className="px-8 py-6 text-lg rounded-lg min-w-[200px]">
+            CTA
+          </Button>
         </div>
       </div>
     </section>

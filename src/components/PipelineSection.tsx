@@ -1,4 +1,4 @@
-import pipelineDiagram from "@/assets/pipeline-diagram.jpg";
+import { Button } from "@/components/ui/button";
 
 const PipelineSection = () => {
   return (
@@ -16,11 +16,9 @@ const PipelineSection = () => {
 
         <div className="relative max-w-6xl mx-auto">
           <div className="bg-gradient-to-br from-section-bg to-white rounded-2xl p-8 shadow-feature">
-            <img 
-              src={pipelineDiagram} 
-              alt="Business pipeline workflow diagram showing integrated process flow from lead generation to customer success"
-              className="w-full h-auto rounded-lg shadow-card"
-            />
+            <div className="wireframe-image wireframe-image-xl">
+              Image
+            </div>
           </div>
           
           {/* Decorative Elements */}
@@ -41,6 +39,13 @@ const PipelineSection = () => {
             <div className="text-3xl font-bold text-primary">95%</div>
             <p className="text-text-body">Customer Satisfaction</p>
           </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-12">
+          <Button variant="hero" size="lg" className="px-8 py-6 text-lg rounded-lg min-w-[200px]">
+            CTA
+          </Button>
         </div>
       </div>
     </section>

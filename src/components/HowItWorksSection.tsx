@@ -1,4 +1,5 @@
 import { Settings, Users, BarChart, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const HowItWorksSection = () => {
   const steps = [
@@ -64,6 +65,13 @@ const HowItWorksSection = () => {
               <p className="text-text-body">{step.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <Button variant="hero" size="lg" className="px-8 py-6 text-lg rounded-lg min-w-[200px]">
+            CTA
+          </Button>
         </div>
       </div>
     </section>

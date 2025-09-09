@@ -16,7 +16,7 @@ const PricingSection = () => {
         "Mobile app access",
         "5GB cloud storage"
       ],
-      cta: "Start Free Trial",
+      cta: "CTA",
       popular: false
     },
     {
@@ -34,7 +34,7 @@ const PricingSection = () => {
         "Integration marketplace",
         "Advanced security features"
       ],
-      cta: "Get Started",
+      cta: "CTA",
       popular: true
     },
     {
@@ -53,7 +53,7 @@ const PricingSection = () => {
         "Custom security protocols",
         "On-premise deployment"
       ],
-      cta: "Contact Sales",
+      cta: "CTA",
       popular: false
     }
   ];
@@ -75,13 +75,13 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <div 
               key={index}
-              className={`relative bg-white rounded-2xl p-8 shadow-card hover:shadow-feature transition-all duration-300 ${
-                plan.popular ? 'border-2 border-primary scale-105' : 'border border-border'
+              className={`relative bg-white rounded-lg p-8 border transition-all duration-300 flex flex-col ${
+                plan.popular ? 'border-2 border-primary' : 'border border-border'
               }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-pricing-highlight text-pricing-highlight-fg px-4 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
+                  <div className="bg-primary text-primary-foreground px-4 py-2 rounded text-sm font-semibold flex items-center space-x-1 border border-border">
                     <Star className="w-4 h-4" />
                     <span>Most Popular</span>
                   </div>
@@ -106,13 +106,15 @@ const PricingSection = () => {
                 ))}
               </ul>
 
-              <Button 
-                variant={plan.popular ? "hero" : "outline"} 
-                className="w-full py-6"
-                size="lg"
-              >
-                {plan.cta}
-              </Button>
+              <div className="text-center mt-auto">
+                <Button 
+                  variant={plan.popular ? "hero" : "outline"} 
+                  className="px-8 py-6 rounded-lg min-w-[200px]"
+                  size="lg"
+                >
+                  {plan.cta}
+                </Button>
+              </div>
             </div>
           ))}
         </div>

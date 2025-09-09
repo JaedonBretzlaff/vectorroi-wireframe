@@ -7,10 +7,10 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo and Company Name */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-hero-gradient rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">B</span>
+            <div className="wireframe-image wireframe-image-sm rounded-full">
+              Logo
             </div>
-            <span className="text-xl font-bold text-text-hero">BusinessCorp</span>
+            <span className="text-xl font-bold text-text-hero">Company Name</span>
           </div>
 
           {/* Navigation */}
@@ -33,8 +33,8 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <Button variant="cta" size="lg">
-            Get Started
+          <Button variant="cta" size="lg" className="px-8 py-6 rounded-lg min-w-[200px]">
+            CTA
           </Button>
         </div>
       </div>

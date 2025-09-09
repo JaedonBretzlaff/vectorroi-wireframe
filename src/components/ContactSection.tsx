@@ -82,8 +82,8 @@ const ContactSection = () => {
                 />
               </div>
               
-              <Button variant="hero" size="lg" className="w-full">
-                Send Message
+              <Button variant="hero" size="lg" className="px-8 py-6 rounded-lg min-w-[200px]">
+                CTA
               </Button>
             </form>
           </div>

@@ -22,18 +22,18 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-text-hero text-white">
+    <footer className="bg-primary text-primary-foreground border-t border-border">
       <div className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="md:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-hero-gradient rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">B</span>
+              <div className="wireframe-image wireframe-image-sm rounded-full">
+                Logo
               </div>
-              <span className="text-xl font-bold">BusinessCorp</span>
+              <span className="text-xl font-bold">Company Name</span>
             </div>
-            <p className="text-white/70 leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               Transforming business operations with innovative solutions that help companies 
               scale efficiently and effectively.
             </p>
@@ -47,7 +47,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <a 
                     href={item.href} 
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="text-muted-foreground hover:text-primary-foreground transition-colors"
                   >
                     {item.name}
                   </a>
@@ -64,7 +64,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <a 
                     href={item.href} 
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="text-muted-foreground hover:text-primary-foreground transition-colors"
                   >
                     {item.name}
                   </a>
@@ -81,7 +81,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <a 
                     href={item.href} 
-                    className="text-white/70 hover:text-white transition-colors"
+                    className="text-muted-foreground hover:text-primary-foreground transition-colors"
                   >
                     {item.name}
                   </a>
@@ -89,10 +89,10 @@ const Footer = () => {
               ))}
             </ul>
             <div className="space-y-2">
-              <p className="text-white/70 text-sm">
+              <p className="text-muted-foreground text-sm">
                 📧 hello@businesscorp.com
               </p>
-              <p className="text-white/70 text-sm">
+              <p className="text-muted-foreground text-sm">
                 📞 +1 (555) 123-4567
               </p>
             </div>
@@ -100,13 +100,10 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-white/20 pt-8">
+        <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-white/70 text-sm">
-              © 2024 BusinessCorp. All rights reserved.
-            </p>
-            <p className="text-white/70 text-sm">
-              Made with ❤️ for modern businesses
+            <p className="text-muted-foreground text-sm">
+              © 2024 Company Name. All rights reserved.
             </p>
           </div>
         </div>

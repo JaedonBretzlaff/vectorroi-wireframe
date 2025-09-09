@@ -83,7 +83,7 @@ const DifferentiatorSection = () => {
               <thead>
                 <tr className="border-b border-border">
                   <th className="text-left py-4 px-4 text-text-body font-medium">Feature</th>
-                  <th className="text-center py-4 px-4 text-primary font-bold">BusinessCorp</th>
+                  <th className="text-center py-4 px-4 text-primary font-bold">Company Name</th>
                   <th className="text-center py-4 px-4 text-text-body font-medium">Competitor A</th>
                   <th className="text-center py-4 px-4 text-text-body font-medium">Competitor B</th>
                 </tr>
@@ -93,7 +93,7 @@ const DifferentiatorSection = () => {
                   <tr key={index} className="border-b border-border/50">
                     <td className="py-4 px-4 font-medium text-text-hero">{row.metric}</td>
                     <td className="py-4 px-4 text-center">
-                      <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="text-primary font-bold">
                         {row.us}
                       </span>
                     </td>
@@ -108,8 +108,8 @@ const DifferentiatorSection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button variant="hero" size="lg" className="px-8 py-6 text-lg">
-            Experience the Difference
+          <Button variant="hero" size="lg" className="px-8 py-6 text-lg rounded-lg min-w-[200px]">
+            CTA
           </Button>
         </div>
       </div>

@@ -7,83 +7,83 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222 84% 5%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 84% 5%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 84% 5%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 239 84% 67%;
+    --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 239 84% 60%;
+    --primary-hover: 0 0% 20%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 84% 5%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96%;
-    --accent-foreground: 222 84% 5%;
+    --accent: 0 0% 95%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 0% 0%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 239 84% 67%;
+    --border: 0 0% 80%;
+    --input: 0 0% 80%;
+    --ring: 0 0% 0%;
 
-    /* Business-specific design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(239 84% 67%) 0%, hsl(262 83% 58%) 100%);
-    --feature-gradient: linear-gradient(135deg, hsl(239 84% 67% / 0.1) 0%, hsl(262 83% 58% / 0.1) 100%);
-    --section-bg: 249 95% 99%;
-    --text-hero: 222 84% 5%;
-    --text-body: 215 16% 47%;
-    --pricing-highlight: 142 76% 36%;
+    /* Wireframe-specific design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 20%) 100%);
+    --feature-gradient: linear-gradient(135deg, hsl(0 0% 0% / 0.05) 0%, hsl(0 0% 20% / 0.05) 100%);
+    --section-bg: 0 0% 98%;
+    --text-hero: 0 0% 0%;
+    --text-body: 0 0% 45%;
+    --pricing-highlight: 0 0% 0%;
     --pricing-highlight-fg: 0 0% 100%;
     
-    /* Shadows */
-    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
-    --shadow-feature: 0 10px 15px -3px hsl(239 84% 67% / 0.1), 0 4px 6px -2px hsl(239 84% 67% / 0.05);
+    /* Minimal shadows for wireframe */
+    --shadow-card: 0 1px 3px hsl(0 0% 0% / 0.1);
+    --shadow-feature: 0 2px 4px hsl(0 0% 0% / 0.1);
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
   }
 
   .dark {
-    --background: 222 84% 5%;
+    --background: 0 0% 5%;
     --foreground: 0 0% 100%;
     
-    --card: 222 84% 5%;
+    --card: 0 0% 5%;
     --card-foreground: 0 0% 100%;
     
-    --popover: 222 84% 5%;
+    --popover: 0 0% 5%;
     --popover-foreground: 0 0% 100%;
     
-    --primary: 239 84% 67%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 239 84% 60%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --primary-hover: 0 0% 80%;
     
-    --secondary: 217 33% 18%;
+    --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 100%;
     
-    --muted: 217 33% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
     
-    --accent: 217 33% 18%;
+    --accent: 0 0% 15%;
     --accent-foreground: 0 0% 100%;
     
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 0% 100%;
+    --destructive-foreground: 0 0% 0%;
     
-    --border: 217 33% 18%;
-    --input: 217 33% 18%;
-    --ring: 239 84% 67%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 100%;
     
-    --section-bg: 222 84% 6%;
+    --section-bg: 0 0% 8%;
     --text-hero: 0 0% 100%; 
-    --text-body: 215 20% 65%;
+    --text-body: 0 0% 60%;
   }
 }
 
@@ -98,5 +98,28 @@
 
   html {
     scroll-behavior: smooth;
+  }
+}
+
+/* Wireframe Image Placeholder Styles */
+@layer components {
+  .wireframe-image {
+    @apply bg-gray-200 border-2 border-gray-300 border-dashed rounded-lg flex items-center justify-center text-gray-500 font-medium;
+  }
+  
+  .wireframe-image-sm {
+    @apply w-24 h-24;
+  }
+  
+  .wireframe-image-md {
+    @apply w-48 h-48;
+  }
+  
+  .wireframe-image-lg {
+    @apply w-full h-64;
+  }
+  
+  .wireframe-image-xl {
+    @apply w-full h-96;
   }
 }
